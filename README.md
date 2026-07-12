@@ -10,7 +10,8 @@ Implemented in a single file [`agent_cube.py`](agent_cube.py) for macOS, using o
 
 <p align="center">
 <img width="48.56%" alt="5x5x5 LED cube from amazon" src="https://github.com/user-attachments/assets/5cabe26f-8503-43a5-ac2c-2abbf0bf5019" /><img width="50%" alt="5x5x5 LED cube from amazon" src="https://github.com/user-attachments/assets/9fa4e2d8-41ab-4dd3-88cb-a9b23a3763dd" /><br/>
-<small>Made for this LED cube, but works with any: <a href="https://www.amazon.com/dp/B0CGCH393Z"><code>Treedix WS2812B 5050 RGB LED Light Board Led Cube Light DIY Kit Squared LED Digital Individually Addressable 5X5X5</code></a></small>
+<small>Made for this LED cube, but can be easily modified to work with any WLED-based lighting:
+<a href="https://www.amazon.com/dp/B0CGCH393Z"><code>Treedix WS2812B 5050 RGB LED Light Board Led Cube Light DIY Kit Squared LED Digital Individually Addressable 5X5X5</code></a></small>
 </p>
 
 ## One-line macOS install
