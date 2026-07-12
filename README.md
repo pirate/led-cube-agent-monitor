@@ -9,17 +9,22 @@ All monitor, detector, animation, WLED, hook, and installer logic lives in the
 single [`agent_cube.py`](agent_cube.py) file and uses only the Python standard
 library.
 
-## Install from GitHub
+## One-line macOS install
 
 ```bash
-pip install git+https://github.com/pirate/led-cube-agent-monitor
-led-cube-agent-monitor install
+pip install git+https://github.com/pirate/led-cube-agent-monitor && led-cube-agent-monitor install
 ```
 
-The second command performs the one-time macOS setup: it merges Claude hooks,
+This installs the package, then performs the one-time macOS setup: it merges Claude hooks,
 creates `~/Library/LaunchAgents/com.pirate.led-cube-agent-monitor.plist`, starts
 the background service, and migrates the old `agent-cube` launch agent if
 present. Codex detection needs no hooks.
+
+Package-only installation also works exactly as a normal Git dependency:
+
+```bash
+pip install git+https://github.com/pirate/led-cube-agent-monitor
+```
 
 To install for a different WLED address:
 
