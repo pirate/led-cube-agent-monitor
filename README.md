@@ -5,39 +5,25 @@ A tiny macOS daemon that shows live Codex and Claude session states on a
 left-to-right order. WLED is driven directly over DDP; Home Assistant is not
 required.
 
-All monitor, detector, animation, WLED, hook, and installer logic lives in the
-single [`agent_cube.py`](agent_cube.py) file and uses only the Python standard
-library.
+
+Implemented in a single file [`agent_cube.py`](agent_cube.py) for macOS, using only the Python standard library.
+
+<center>
+<img width="500" alt="5x5x5 LED cube from amazon" src="https://github.com/user-attachments/assets/5cabe26f-8503-43a5-ac2c-2abbf0bf5019" /><br/>
+<small>Made for this LED cube, but works with any: <a href="https://www.amazon.com/dp/B0CGCH393Z">
+<code>Treedix WS2812B 5050 RGB LED Light Board Led Cube Light DIY Kit Squared LED Digital Individually Addressable 5X5X5</code></a></small></center>
 
 ## One-line macOS install
 
 ```bash
-pip install git+https://github.com/pirate/led-cube-agent-monitor && led-cube-agent-monitor install
+pip install git+https://github.com/pirate/led-cube-agent-monitor
+led-cube-agent-monitor --host <ip address of wled device> install
 ```
 
 This installs the package, then performs the one-time macOS setup: it merges Claude hooks,
 creates `~/Library/LaunchAgents/com.pirate.led-cube-agent-monitor.plist`, starts
-the background service, and migrates the old `agent-cube` launch agent if
-present. Codex detection needs no hooks.
+the background service that updates the cube animation periodically. Codex detection needs no hooks.
 
-Package-only installation also works exactly as a normal Git dependency:
-
-```bash
-pip install git+https://github.com/pirate/led-cube-agent-monitor
-```
-
-To install for a different WLED address:
-
-```bash
-led-cube-agent-monitor --host 192.168.5.147 install
-```
-
-Upgrade later with:
-
-```bash
-pip install --upgrade git+https://github.com/pirate/led-cube-agent-monitor
-led-cube-agent-monitor install
-```
 
 ## Animations
 
