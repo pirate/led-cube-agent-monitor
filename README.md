@@ -25,6 +25,9 @@ This installs the package, then performs the one-time macOS setup: it merges Cla
 creates `~/Library/LaunchAgents/com.pirate.led-cube-agent-monitor.plist`, starts
 the background service that updates the cube animation periodically. Codex detection needs no hooks.
 
+You are encouraged to modify / make your own animation daemon for your needs! Codex/Claude are both
+great at customizing the animations, setting up hooks for different states, and more!
+
 
 ## Animations
 
@@ -83,6 +86,3 @@ tail -f ~/Library/Logs/led-cube-agent-monitor.error.log
 led-cube-agent-monitor uninstall
 pip uninstall led-cube-agent-monitor
 ```
-
-The legacy `agent-cube` and `agent-cube-hook` executable names remain available
-as compatibility aliases.
